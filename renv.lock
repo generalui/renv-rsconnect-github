@@ -16,6 +16,22 @@
       "Repository": "CRAN",
       "Hash": "e8a22846fff485f0be3770c2da758713"
     },
+    "concordanceIndex": {
+      "Package": "concordanceIndex",
+      "Version": "0.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteRepo": "concordanceIndex",
+      "RemoteUsername": "th86",
+      "RemoteRef": "master",
+      "RemoteSha": "2e6f75f9c85c509e021e374a83ca58478e88e2dc",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo.1": "concordanceIndex",
+      "RemoteUsername.1": "th86",
+      "RemoteRef.1": "master",
+      "RemoteSha.1": "2e6f75f9c85c509e021e374a83ca58478e88e2dc",
+      "Hash": "d8801444e5cec1efe89aedd9ac39c1b9"
+    },
     "curl": {
       "Package": "curl",
       "Version": "4.3",

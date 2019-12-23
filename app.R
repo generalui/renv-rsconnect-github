@@ -1,5 +1,5 @@
-# print("App.R - concordanceIndex dependency...")
-# concordanceIndex::concordanceIndex
+# concordanceIndex dependency...
+concordanceIndex::concordanceIndex
 
 # Simple Shiny App based on:
 # https://github.com/rstudio/shiny-examples/tree/master/084-single-file
