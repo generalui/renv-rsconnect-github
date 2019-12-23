@@ -42,8 +42,37 @@ In FUN(X[[i]], ...) :
 
 # Current Fix
 
-* https://docs.rstudio.com/shinyapps.io/getting-started.html (section: "2.4.0.1 Important note on GitHub packages")
+> Only packages installed from GitHub with devtools::install_github, in version 1.4 (or later) of devtools, are supported. Packages installed with an earlier version of devtools must be reinstalled with the later version before you can deploy your application. If you get an error such as “PackageSourceError” when you attempt to deploy, check that you have installed all the packages from Github with devtools 1.4 or later.
+> https://docs.rstudio.com/shinyapps.io/getting-started.html<br>(section: "2.4.0.1 Important note on GitHub packages")
 
 ```R
+renv::install('devtools')
 devtools::install_github("th86/concordanceIndex", force=TRUE)
 ```
+
+NOTE: I had to close RStudio and re-open it before deploy actually worked:
+
+```
+> rsconnect::deployApp()
+Preparing to deploy application...
+Update application currently deployed at
+https://iatlas-test.shinyapps.io/084-single-file/? [Y/n] y
+DONE
+Uploading bundle for application: 1597446...DONE
+Deploying bundle: 2688378 for application: 1597446 ...
+Waiting for task: 678409412
+  building: Building image: 2935796
+  building: Installing packages
+  building: Installing files
+  building: Pushing image: 2935796
+  deploying: Starting instances
+  terminating: Stopping old instances
+Application successfully deployed to https://iatlas-test.shinyapps.io/084-single-file/
+```
+
+# GitHub Packages Tested & Not Working
+
+In addition to the concordanceIndex package, I also tested ImmuneSubtimeClassifier, which fails in a similar way.
+
+- https://github.com/Gibbsdavidl/ImmuneSubtypeClassifier
+- https://github.com/th86/concordanceIndex
