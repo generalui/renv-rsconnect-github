@@ -50,7 +50,10 @@ renv::install('devtools')
 devtools::install_github("th86/concordanceIndex", force=TRUE)
 ```
 
-NOTE: I had to close RStudio and re-open it before deploy actually worked:
+Notes:
+
+* devtools::install_github doesn't alter any files in the repo; whatever sideeffects it has can't be checked in, so everyone has to do this install step if they want to be able to deploy the app.
+* I had to close RStudio and re-open it before the deploy actually worked.
 
 ```
 > rsconnect::deployApp()
